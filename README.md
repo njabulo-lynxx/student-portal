@@ -265,7 +265,7 @@ The project currently contains no application code.
 The first implementation stage is to build the application's HTML structure before introducing PHP, JavaScript or database functionality.
 
 **Section 1: Initial HTML Structure completed 2026/09/28**
-I have currently established:
+I have established:
 * The HTML document foundation
 * Header
 * Site branding
@@ -276,12 +276,22 @@ I have currently established:
 * Footer
 * Semantic HTML structure
 
+**Section 2: HTML Application Structure completed 2026/09/28**
+I have learned:
+* semantic HTML structure
+* reusable PHP templates
+* require
+* how PHP assembles a page
+* the relationship between PHP and HTML
+* shared vs page-specific content
+* why use .php files even though the page contains very little PHP
+
 *Current project state:*
 ```text
-student-portal/
-│
-├── README.md
-└── index.html
+Student-Portal/
+├── index.php
+├── header.php
+└── footer.php
 ```
 
 
