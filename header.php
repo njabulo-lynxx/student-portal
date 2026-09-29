@@ -10,7 +10,7 @@
       <nav aria-label="Main navigation"> 
         <a class="site-brand" href="index.php">Student Portal</a> <ul class="nav-links"> 
           <li><a href="index.php">Home</a></li> 
-          <li><a href="#">Login</a></li>
+          <li><a href="login.php">Login</a></li>
         </ul> 
       </nav>
     </header>
