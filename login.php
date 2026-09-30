@@ -1,5 +1,31 @@
 <?php
 require 'header.php';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  $userType = $_POST['userType'] ?? '';
+  $username = $_POST['username'] ?? '';
+  $password = $_POST['password'] ?? '';
+
+  if (empty($userType)) {
+    echo "UserType is required.";
+  } else {
+    echo $userType;
+  }
+
+  if (empty($username)) {
+    echo "Username is required.";
+  } else {
+    echo $username;
+  }
+
+  if (empty($password)) {
+    echo "Password is required.";
+  }
+
+} else {
+  echo '<p>Form has not been submitted.</p>';
+}
+
 ?>
 
 <main>
@@ -8,8 +34,8 @@ require 'header.php';
 
     <h1>Login</h1>
 
-    <form>
-      <input type="radio" id="student" name="userType" value="student">
+    <form action="login.php" method="post">
+      <input type="radio" id="student" name="userType" value="student" required>
       <label for="student">student</label>
 
       <input type="radio" id="admin" name="userType" value="admin">
@@ -27,3 +53,7 @@ require 'header.php';
   </section>
 
 </main>
+
+<?php
+require 'footer.php';
+?>

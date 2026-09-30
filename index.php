@@ -13,7 +13,7 @@ require 'header.php';
       <p>
         Access your student information, academic records and other student services through the portal.
       </p>
-      <a href="#">Login</a>
+      <a href="login.php">Login</a>
     </div>
 
   </section>
