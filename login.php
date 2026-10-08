@@ -1,25 +1,33 @@
 <?php
 require 'header.php';
 
+$errors = [];
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $userType = $_POST['userType'] ?? '';
   $username = $_POST['username'] ?? '';
   $password = $_POST['password'] ?? '';
 
   if (empty($userType)) {
-    echo "UserType is required.";
-  } else {
-    echo $userType;
+    $errors[] = "UserType is required.";
+  } elseif ($userType !== 'student' && $userType !== 'admin') {
+    $errors[] = "Invalid user type.";
   }
 
   if (empty($username)) {
-    echo "Username is required.";
-  } else {
-    echo $username;
+    $errors[] = "Username is required.";
   }
 
   if (empty($password)) {
-    echo "Password is required.";
+    $errors[] = "Password is required.";
+  }
+
+  if (empty($errors)) {
+    echo "Validation successful!";
+  } else {
+    foreach ($errors as $error) {
+      echo "<p>$error</p>";
+    }
   }
 
 } else {
